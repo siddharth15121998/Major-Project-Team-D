@@ -1,0 +1,80 @@
+{% extends 'adminview.html' %}
+{% block myContent %}
+<div class="container">
+    <div class="row">
+        <!-- <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>  -->
+        <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+          <form action="http://127.0.0.1:8000/voizfonica/addapi/" method="post">
+            <div id="nav1">
+            <table class="table table-borderless">
+                <Thead style="font-style: italic;"><center>CUSTOMER REGISTRATION</center></Thead>
+                <tr>
+                    <td>CUSTOMER NAME</td>
+                    <td><input name="Cname" type="text" class="form-control" required></td>
+                </tr>
+                <tr>
+                    <td>AADHAR</td>
+                    <td><input  name="Cadhar" type="text" class="form-control" required></td>
+                </tr>
+                <tr>
+                    <td>EMAIL ID</td>
+                    <td><input pattern="[\w-]{1,20}@\w{2,20}\.\w{2,3}$"  name="Cemail" type="text" class="form-control" required></td>
+                </tr>
+                <tr>
+                    <td>ADDRESS</td>
+                    <td><input  name="Caddress" type="text" class="form-control" required></td>
+                </tr>
+                <tr>
+                    <td>ALTERNATE MOBILE NO</td>
+                    <td><input pattern="(0|91)?[-\s]?[6-9]\d{9}" name="Calternatemobilenumber" type="text" class="form-control" required></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <!-- <td><input  name="Typeofcustomer" type="text" class="form-control" required></td> -->
+                    <select  name="Typeofcustomer" id="" class="form-control" required>
+                        <option selected="true" disabled="disabled">Choose type of service</option>
+                        <option value="Prepaid">Prepaid</option>
+                        <option value="Postpaid">Postpaid</option>
+                        <option value="Dongle">Dongle</option>
+                    </select>
+                </tr>
+                <tr>
+                    <td>NEW NUMBER</td>
+                    <td><input  name="Newnumber" type="text" class="form-control" required></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input  name="password" type="password" class="form-control" required></td>
+                </tr>
+               
+                    <td></td>
+                    <td><center><button type="submit" class="btn btn-outline-secondary">REGISTER</button></center></td>
+                </tr>
+            </table>
+        </div>
+        <br>
+          </form>
+        </div>
+        <div class="col col-12 col-sm-1 col-md-1 col-lg-1 col-xl-1 col-xxl-1"></div>
+        <div class="col col-12 col-sm-5 col-md-5 col-lg-5 col-xl-5 col-xxl-5"> <h6 style="font-style: oblique;">AADHAR UPLOAD</h6>
+            
+            <form method="post" action="http://127.0.0.1:8000/voizfonica/upload/" enctype="multipart/form-data" >
+            {% csrf_token %}
+            <input type="file" class="form-control" name="document" required>
+            <br>
+            <center><button type="submit" class="btn btn-secondary">UPLOAD</button></center></form>
+        
+            <h6 style="font-style: oblique;">PHOTO UPLOAD</h6>
+            
+            <form method="post" action="http://127.0.0.1:8000/voizfonica/upload_image/" enctype="multipart/form-data" >
+            {% csrf_token %}
+            <input type="file" class="form-control" name="document_image" required>
+            <br>
+            <center><button type="submit" class="btn btn-secondary">UPLOAD</button></center></form>
+        
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+    

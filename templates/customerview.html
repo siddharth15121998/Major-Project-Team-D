@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet"  href="/static/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+
+    <body>
+      <div class="wrapper">
+        <marquee behavior="alternate"><span class="marquee" style="font-style: oblique;"><h3 style="color:black;">WELCOME TO VOIZFONICA FAMILY</h3></span></marquee>
+        </div>
+ 
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-warning">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" style="color: black;"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+         
+          
+          <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: black;">
+                  PREPAID
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                  <li><a class="dropdown-item" href="http://127.0.0.1:8000/voizfonica/prepaidviewonly/" >VIEW PLANS</a></li>
+                  <li><a class="dropdown-item" href="http://127.0.0.1:8000/voizfonica/rechargeprepaid/"></a>RECHARGE</a></li>
+                </ul>
+                
+              </li>
+              
+            </ul>
+            
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: black;">
+                    POSTPAID
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                    <li><a class="dropdown-item" href="http://127.0.0.1:8000/voizfonica/postpaidviewonly/">VIEW PLANS</a></li>
+                    <li><a class="dropdown-item" href="#">PAY BILL</a></li>
+                
+                  </ul>
+                 
+                  </li>
+                  
+                  <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: black;">
+                        DONGLE
+                      </a>
+                      <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                        <li><a class="dropdown-item" href="http://127.0.0.1:8000/voizfonica/dongleviewallprepaidplans/">PREPAID PLAN DONGLE</a></li>
+                        <li><a class="dropdown-item" href="http://127.0.0.1:8000/voizfonica/dongleviewallpostpaidplans/">POSTPAID PLAN DONGLE</a></li>
+                        <li><a class="dropdown-item" href="#"></a></li>
+                      </ul>
+                  
+                </li>
+              </ul>
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: black;">
+                   SUPPORT 
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                    <li><a class="dropdown-item" href="http://127.0.0.1:8000/voizfonica/registerquery/">RAISE QUERY</a></li>
+                    <li><a class="dropdown-item" href="#"></a></li>
+                    <li><a class="dropdown-item" href="../contactus/">CALL CUSTOMER CARE</a></li>
+                  </ul>
+              
+            </li>
+
+          </ul>
+          <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/voizfonica/logout/" style="color: black;">LOGOUT</a>
+          
+          
+              
+          </div>
+        </div>
+      </nav>
+      {% if request.session.uname %}
+
+    <h4>Hello, {{request.session.uname}} {{request.session.uid}} </h4>
+    {% else %}
+    <h2>login first</h2>
+
+    {% endif %}
+
+
+<br>
+
+
+
+    <div class="container"> 
+        <div class="row">
+             <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4"></div>
+             <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4"> 
+                <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="/static/2nd.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item " data-bs-interval="2000">
+                        <img src="/static/1st.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="/static/3rd.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="/static/4th.jpg" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </div>
+             <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">  
+              
+              
+              
+              
+
+
+    
+            </div>
+
+ </div>
+    </div> 
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+</html>
