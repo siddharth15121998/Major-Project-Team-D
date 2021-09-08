@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" 
+    crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recharge page</title>
+</head>
+<style>
+    .dropbtn {
+        background-color: yellow;
+        color: black;
+        padding: 10px;
+        font-size: 12px;
+    }
+    .dropdown {
+        display: inline-block;
+        position: relative
+    }
+    .dropdown-content {
+        position: absolute;
+        background-color: lightgrey;
+        min-width: 200px;
+        display: none;
+        z-index: 1;
+    }
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    .dropdown-content a:hover {
+        background-color: orange;
+    }
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    .dropdown:hover .dropbtn {
+        background-color: grey;
+    }
+    </style>
+    </Head>
+    <Body> 
+        <div class="container">
+            <div class="row">
+                <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+                <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+                    <form action="http://127.0.0.1:8000/voizfonica/rechargeprepaidplans/" method="post">
+        <table class="table table-borderless table-striped">
+            
+                <h2>PREPAID RECHARGE</h2>
+                <tr>
+                    <td>MOBILE NUMBER</td>
+                    <td><input name="mobilenumber" type="text" class="form-control" required></td>
+                </tr>
+            
+                <tr> 
+                    <td>PLANS</td>
+                    <td>
+                        <!-- <select  name="plan" id="" class="form-control">
+                            <option selected="true" disabled="disabled">Choose plan</option>
+                            <option value="Rs.78-unlimited calls">Rs.78-unlimited calls</option>
+                            <option value="Rs.99-50gb data">Rs.99-50gb data</option>
+                            <option value="Rs.129-24days-1.5gb/day data">Rs.129-24days-1.5gb/day data</option>
+                        </select> -->
+
+                        <select name="plan" id="">
+                            <option selected="true" value="Rs.78 - Unlimited calls 5GB-Data 56days-validity 2 messages/day">
+                                <div class="card" style="width: 18rem; background-color: brown;">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Choose from our</h5>
+                                      <h6 class="card-subtitle mb-2 text-muted">Recommended Packs</h6>
+                                      <p class="card-text"><div class="pack-detail-row"><div class="coupon"></div><div class="pack-top"><div class="col"><p class="fs-lg icn-rupee">₹78-</p></div><div class="col"><p class="fs-lg icn-rupee">5GB</p><p class="text-grey fs-sm">data</p></div><div class="col"><p class="fs-lg">Existing</p><p class="text-grey fs-sm">Validity</p></div><div class="col"><button class="btn-circle icn-rupee">₹78</button></div></div></p>
+                                      
+                                    </div>
+                                  </div>
+
+                            </option>
+                            <option selected="true" value="Rs.399-unlimited calls 1.5GB/day-data 56days-validity 100messages/Day"> 
+
+                                <div class="card" style="width: 18rem; background-color: brown;">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Choose from our</h5>
+                                      <h6 class="card-subtitle mb-2 text-muted">Recommended Packs</h6>
+                                      <p class="card-text"><div class="pack-detail-row"><div class="coupon"></div><div class="pack-top"><div class="col"><p class="fs-lg icn-rupee">₹399-</p><p class="text-grey fs-sm icn-rupee">Truly Unlimited Calls</p></div><div class="col"><p class="fs-lg icn-rupee">1.5GB</p><p class="text-grey fs-sm">/Day</p></div><div class="col"><p class="fs-lg">56 Days</p><p class="text-grey fs-sm">validity</p></div><div class="col">
+                                          <button class="btn-circle icn-rupee">₹399</button></p>
+                                      
+                                    </div>
+                                  </div>
+                            </option>
+
+
+
+                        </select>
+                        
+                    </td>
+
+                   
+              
+
+                
+
+                    
+                </tr>
+                        
+               <tr>
+                <td></td>
+        
+         <td>
+            <Button class="btn btn-success">Recharge</Button></td>
+        </td>
+    </tr> 
+    </table>
+                    </form>
+    </div>
+    <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+    </div> 
+        </div>
+        
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    
+</body>
+</html>

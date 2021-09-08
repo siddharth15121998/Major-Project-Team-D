@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+			<title>Login Form</title>
+				<link rel="stylesheet" type="text/css" href="/static/background css/customerstyle.css">	
+				
+<script type="text/javascript">
+window.history.forward();
+function noback()
+{
+	window.history.forward();
+	}</script>			
+				</head>
+					<body onload=""noback();" onpagehow="if(event.persisted)noback();" onunload="">
+					<div class="container">
+					<div class="imgBx">
+					<!-- <img src="/static/bg.jpeg"> -->
+					</div>
+					<div class="loginBox">
+					<h1><b><font color="white"> CUSTOMER LOGIN</font></b></h1>
+					<form action="http://127.0.0.1:8000/voizfonica/logincustomer/" method="POST">
+					<CENTER>
+						<div class="inputBox">
+						<input type="text" name="Newnumber" placeholder="Mobile number">
+						<span></span> 
+					</div>
+						<div class="inputBox">
+						<input type="password" name="password" placeholder="password">
+						<span><i class="fa fa-lock" aria-hidden="true"></i></span>
+					</div></CENTER>
+						<input type="submit" value="LOGIN" name="sub">
+					
+					</form>
+					</div>
+					
+					</body>
+					</html>
